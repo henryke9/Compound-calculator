@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Montserrat" rel="stylesheet">
+    <script src="codigos.js"></script>
+</head>
+
+<body id="teste" style="background-color:#C1F7FF;">
+    <fieldset style="background-color: green;">
+        <legend>Calculo valor futuro sem reforço</legend>
+        <label>Valor Inicial:</label>
+        <input name="valor" id="val" type="text" onkeyup="verificarnum()" /> &nbsp
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular()" />
+        <label id="resultado"> valor Futuro: </label>
+        <br>
+    </fieldset>
+    <br>
+    <fieldset style="background-color:green;"> 
+        <legend>calculo valor inicial sem reforço</legend>
+        <label>Valor Futuro:</label>
+        <input name="valinvest" id="valinvest" type="text"/> &nbsp
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro_1">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro_1" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year_1" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcularinvest()" />
+        <label id="resultado_1"> valor inicialsem reforço: </label>
+        <br>
+    </fieldset>
+    <br>
+    <fieldset style="background-color: green;">
+        <legend>Calculo valor futuro com reforço mensal </legend>
+        <label>Valor inicial:</label>
+        <input name="valor1" id="val1" type="text" onkeyup="verificarnum()" /> &nbsp
+        <label>Contributo Mensal</label>
+        <input name="contributo" id="contr" type="text" onkeyup="varificarnum2()" />
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro1">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro1" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year1" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular2()" />
+        <label id="resultado1"> valor futuro com reforço: </label>
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Calculo valor inicial com reforço</legend>
+        <label>Valor Futuro:</label>
+        <input name="valor1" id="val2" type="text" onkeyup="verificarnum()" /> &nbsp
+        <label>Contributo Mensal</label>
+        <input name="contributo" id="contr1" type="text" onkeyup="varificarnum2()" />
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro2">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro2" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year2" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular3()" />
+        <label id="resultado2"> valor inicial com reforço: </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Calculo valor do reforço mensal</legend>
+        <label>Valor incial:</label>
+        <input name="valor1" id="val2" type="text" onkeyup="verificarnum()" /> &nbsp
+        <label>Valor Futuro</label>
+        <input name="contributo" id="contr1" type="text" onkeyup="varificarnum2()" />
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro2">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro2" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year2" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular3()" />
+        <label id="resultado2"> valor do reforço : </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Calculo valor do reforço mensal</legend>
+        <label>Valor incial:</label>
+        <input name="valor1" id="val2" type="text" onkeyup="verificarnum()" /> &nbsp
+        <label>Valor Futuro</label>
+        <input name="contributo" id="contr1" type="text" onkeyup="varificarnum2()" />
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro2">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro2" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year2" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular3()" />
+        <label id="resultado2"> valor do reforço : </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Calculo valor do reforço mensal</legend>
+        <label>Valor incial:</label>
+        <input name="valor1" id="val2" type="text" onkeyup="verificarnum()" /> &nbsp
+        <label>Valor Futuro</label>
+        <input name="contributo" id="contr1" type="text" onkeyup="varificarnum2()" />
+        <lable>Tipo juro:</lable>
+        <select name="juro" id="juro2">
+            <option value="simples"> Juro Simples </option>
+            <option value="composto"> Juro Composto </option>
+        </select> &nbsp
+        <label>Juro:</label>
+        <input name="valjuro" id="valjuro2" type="text" /> &nbsp
+        <label>Prazo:</label>
+        <input name="anos" id="year2" type="text" /> &nbsp
+        <input type="button" value="Calcular" onclick="calcular3()" />
+        <label id="resultado2"> valor do reforço : </label>
+    </fieldset>
+</body>
+
+</html>
