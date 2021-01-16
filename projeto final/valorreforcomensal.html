@@ -1,0 +1,90 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+</head>
+
+<div class="jumbotron">
+    <h1 class="text-center display-4">Interest Calculator</h1>
+    <hr>
+    <div class="dropdown">
+        <button style="margin-left:850px" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Selecionar calculo
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="./valorfuturosemreforco.html">Calculo valor futuro sem reforço</a></li>
+          <li><a class="dropdown-item" href="./valorinicialsemreforco.html">Calculo valor inicial sem reforço</a></li>
+          <li><a class="dropdown-item" href="./valorfuturocomreforco.html">Calculo valor futuro com reforço mensal</a></li>
+          <li><a class="dropdown-item" href="./valorincialcomreforco.html">Calculo valor inicial com reforço</a></li>
+          <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>
+          <li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>
+          
+        </ul>
+      </div>
+        
+      
+      <br>
+    <div class="container" id="simple-interest">
+      <h3>Calculo reforço mensal</h3>
+      <form id="siForm">
+        <div class="form-group">
+          <label for="principalSimple">Valor Inicial: </label>
+          <input name="valor1" type="text" class="form-control" id="val2" placeholder="Inserir Valor Inicial" onkeyup="verificarnum(id)" /> &nbsp
+        </div>
+        
+        <div class="form-group">
+           
+                <label>Tipo Juro: </label>
+                <select name="juro" id="juro2" class="form-select">
+                    <option value="simples"> Juro Simples </option>
+                    <option value="composto"> Juro Composto </option>
+                    <select>
+                    <br>
+                <div class="form-group">
+                    <label for="principalSimple"> Juro:</label>
+                    <input name="juro" id="juro2" type="text" class="form-control"  placeholder="Inserir Valor do Juro" onkeyup="verificarnum(id)"/> &nbsp
+                  </div>
+
+                  <div class="form-group">
+                    <label for="principalSimple">Prazo:</label>
+                    <input name ="anos" id="year2" type="text" class="form-control"  placeholder="Inserir Prazo" onkeyup="verificarnum(id)" /> &nbsp
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="principalSimple">Valor do reforço: </label>
+                    <input  id="resultados2" type="text" class="form-control"  placeholder="Inserir Valor do Juro" onkeyup="verificarnum(id)"/> &nbsp
+                  </div>
+                  
+                  
+                </div>
+             
+                <label>Tipo de Reforço</label>
+                <select id="tipcontr" class="form-select" aria-label="Default select example" onchange="calcular2()">
+                    <option value="semanal"> Contributo semanal </option>
+                        <option value="mensal"> contributo mensal </option>
+                        <option value="trimestral"> Contributo trimestral </option>
+                        <option value="semestral"> Contributo semestral </option>
+                        <option value="anual"> Contributo anual </option>
+                  </select>
+                  <div class="form-group">
+                    <label for="interestSimple">Valor Futuro Com Reforço: </label>
+                    <input type="text" class="form-control" id="resultado1">
+                  </div>
+          
+        </div>
+        
+      </form>
+      <div>
+        <p class="lead mt-3" id="siOutput-01"></p>
+        <p class="lead mb-3" id="siOutput-02"></p>
+      </div>
+      <div class="text-center">
+        <input class="btn btn-secondary btn-lg" type="button" value="Reset" onClick="document.getElementById('siForm').reset()">
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="container" div="compound-interest ">
+      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="codigos.js"></script>
