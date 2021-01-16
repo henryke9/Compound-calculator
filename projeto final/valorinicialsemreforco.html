@@ -9,7 +9,7 @@
   <hr>
 
   <div class="dropdown">
-    <button style="margin-left:850px" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+    <button style="text-align: center ; margin:auto; display:flex;   ;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
       data-bs-toggle="dropdown" aria-expanded="false">
       Selecionar calculo
     </button>
@@ -18,13 +18,13 @@
       <li><a class="dropdown-item" href="./valorfuturocomreforco.html">Calculo valor futuro com reforço mensal</a></li>
       <li><a class="dropdown-item" href="./valorincialcomreforco.html">Calculo valor inicial com reforço</a></li>
       <li><a class="dropdown-item" href="./valorreforcomensal.html">Calculo valor do reforço mensal</a></li>
-      <li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>
-      <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>
+       <!--<li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>-->
+     <!-- <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>-->
     </ul>
   </div>
   <br>
   <div class="container" id="simple-interest">
-    <h3>Valor Inicial sem reforço</h3>
+    <h3 style="text-align: center;">Valor Inicial sem reforço</h3>
     <form id="siForm">
       <div class="form-group">
 
@@ -65,7 +65,8 @@
     <p class="lead mb-3" id="siOutput-02"></p>
   </div>
   <div class="text-center">
-    <input class="btn btn-secondary btn-lg" type="button" value="Reset"
+    <input type="button" value="Guardar / Imprimir" onclick="imprimir()" class="btn btn-secondary" >
+    <input class="btn btn-secondary" type="button" value="Reset"
       onClick="document.getElementById('siForm').reset()">
   </div>
 </div>
@@ -73,6 +74,18 @@
 <hr>
 <br>
 <div class="container" div="compound-interest ">
+  <table class="table table-striped table-bordered" id="myTable">
+    <tr>
+        <th>Anos</th>
+        <th id="Invest_col_head">Investimento</th>
+        <th id="tpjuro_col_head">Tipo de juro</th>
+        <th id="tajuro_col_head">Taxa de juro</th>
+        <th id="pcontr_col_head">Periodo de contributo</th>
+        <th id="contr_col_head">Contributo</th>
+        <th id="vjuro_col_head">Valor de juro</th>
+        <th id="vfinal_col_head">Valor final</th>
+    </tr>
+</table>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

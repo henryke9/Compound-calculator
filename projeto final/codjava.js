@@ -6,6 +6,10 @@ function printDiv(divID) {
    // document.body.innerHTML = oldPage;
 }
 
+function imprimir() {
+    window.print();
+}
+
 function verificarnum(id) {
     //verifica se os valores introduzidos sao numericos ou "." 
     var num = document.getElementById(id).value;

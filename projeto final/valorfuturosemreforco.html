@@ -9,7 +9,7 @@
   <hr>
 
   <div class="dropdown">
-    <button style="margin-left:850px" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+    <button style="text-align: center ; margin:auto; display:flex;   ;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
       data-bs-toggle="dropdown" aria-expanded="false">
       Selecionar calculo
     </button>
@@ -19,13 +19,13 @@
       <li><a class="dropdown-item" href="./valorfuturocomreforco.html">Calculo valor futuro com reforço mensal</a></li>
       <li><a class="dropdown-item" href="./valorincialcomreforco.html">Calculo valor inicial com reforço</a></li>
       <li><a class="dropdown-item" href="./valorreforcomensal.html">Calculo valor do reforço mensal</a></li>
-      <li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>
-      <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>
+      <!--<li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>
+      <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>-->
     </ul>
   </div>
   <br>
   <div class="container" id="simple-interest">
-    <h3>Valor futuro sem reforço</h3>
+    <h3 style="text-align: center;">Valor futuro sem reforço</h3>
     <form id="siForm">
       <div class="form-group">
         <label for="principalSimple">Valor Inicial: </label>
@@ -68,8 +68,8 @@
       <p class="lead mb-3" id="siOutput-02"></p>
     </div>
     <div class="text-center">
-      <input type="button" value="Guardar / Imprimir" onclick="javascript:printDiv('jumbotron')" class="btn btn-secondary btn-lg" >
-      <input class="btn btn-secondary btn-lg" type="button" value="Reset"
+      <input type="button" value="Guardar / Imprimir" onclick="imprimir()" class="btn btn-secondary" >
+      <input class="btn btn-secondary" type="button" value="Reset"
         onClick="document.getElementById('siForm').reset()">
     </div>
   </div>
