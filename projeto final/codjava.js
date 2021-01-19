@@ -45,7 +45,7 @@ function verificarnum(id) {
             break;
     }
 }
-
+var chartanos= [];
 function calcular() {
     // função para calcular valor futuro sem reforço 
     var juro = document.getElementById('juro').value;
@@ -81,7 +81,9 @@ function calcular() {
                     valjuros = valjuros + taxjuro;
                     cell5.innerHTML = taxjuro.toFixed(2) + "€";
                     cell6.innerHTML = valjuros.toFixed(2) + "€";
+                    chartanos[i]= i + 1;
                 }
+                xlabel.push(chartanos);
                 valjuros = parseFloat(valjuros.toFixed(2));
                 document.getElementById("resultado").value = valjuros;
                 break;
@@ -104,7 +106,7 @@ function calcular() {
                     var cell6 = row.insertCell(5);
                     cell6.classList.add("vfinal_col");
                     cell1.innerHTML = totalRowCount;
-                    cell2.innerHTML = valjuros.toFixed(2)+"€";
+                    cell2.innerHTML = num.toFixed(2)+"€";
                     cell3.innerHTML = juro;
                     cell4.innerHTML = valjuro + "%";
                     valjuros = valjuros + taxjuro;
@@ -243,7 +245,7 @@ function calcular2() {
                     var cell8 = row.insertCell(7);
                     cell8.classList.add("vfinal_col");
                     cell1.innerHTML = totalRowCount;
-                    cell2.innerHTML = valjuros.toFixed(2) + "€";
+                    cell2.innerHTML = num.toFixed(2) + "€";
                     cell3.innerHTML = juro;
                     cell4.innerHTML = valjuro + "%";
                     cell5.innerHTML = tipo;
