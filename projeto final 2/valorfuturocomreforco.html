@@ -1,0 +1,112 @@
+<head>
+  <title>Interest Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="codjava.js"></script>
+</head>
+
+<div class="jumbotron">
+  <h1 class="text-center display-4">Interest Calculator</h1>
+  <hr>
+  <div class="dropdown">
+    <button style="text-align: center ; margin:auto; display:flex;   ;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      Selecionar calculo
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="./valorfuturosemreforco.html">Calculo valor futuro sem reforço</a></li>
+      <li><a class="dropdown-item" href="./valorinicialsemreforco.html">Calculo valor inicial sem reforço</a></li>
+      <li><a class="dropdown-item" href="./valorincialcomreforco.html">Calculo valor inicial com reforço</a></li>
+      <li><a class="dropdown-item" href="./valorreforcomensal.html">Calculo valor do reforço mensal</a></li>
+     <!-- <li><a class="dropdown-item" href="#">Calculo anos de investimento</a></li>
+      <li><a class="dropdown-item" href="#">Calculo valor do reforço mensal</a></li>-->
+    </ul>
+  </div>
+  <br>
+  <div class="container" id="simple-interest">
+    <h3 style="text-align: center">Valor futuro com reforço mensal</h3>
+    <form id="siForm">
+      <div class="form-group">
+        <label for="principalSimple">Valor Inicial: </label>
+        <input name="valor1" type="text" class="form-control" id="val1" placeholder="Inserir Valor Inicial"
+          onkeyup="verificarnum(id)" /> &nbsp
+      </div>
+
+      <div class="form-group">
+
+        <label>Tipo Juro: </label>
+        <select name="juro" id="juro1" class="form-select" onchange="calcular2()">
+          <option value="simples"> Juro Simples </option>
+          <option value="composto"> Juro Composto </option>
+          <select>
+            <br>
+            <div class="form-group">
+              <label for="principalSimple"> Juro:</label>
+              <input name="valjuro" id="valjuro1" type="text" class="form-control" placeholder="Inserir Valor do Juro"
+                onkeyup="verificarnum(id)" /> &nbsp
+            </div>
+
+            <div class="form-group">
+              <label for="principalSimple">Prazo:</label>
+              <input name="anos" id="year1" type="text" class="form-control" placeholder="Inserir Prazo"
+                onkeyup="verificarnum(id)" /> &nbsp
+            </div>
+
+            <div class="form-group">
+              <label for="principalSimple"> Contributo Mensal</label>
+              <input name="contributo" id="contr" type="text" class="form-control" placeholder="Inserir Valor do Juro"
+                onkeyup="verificarnum(id)" /> &nbsp
+            </div>
+
+
+      </div>
+
+      <label>Tipo de Reforço</label>
+      <select id="tipcontr" class="form-select" aria-label="Default select example" onchange="calcular2()">
+        <option value="semanal"> Contributo semanal </option>
+        <option value="mensal"> contributo mensal </option>
+        <option value="trimestral"> Contributo trimestral </option>
+        <option value="semestral"> Contributo semestral </option>
+        <option value="anual"> Contributo anual </option>
+      </select></br>
+    
+      <div class="form-group">
+        <label for="interestSimple">Valor Futuro Com Reforço: </label>
+        <input type="text" class="form-control" id="resultado1" readonly>
+      </div>
+
+  </div>
+
+  </form>
+  <div>
+    <p class="lead mt-3" id="siOutput-01"></p>
+    <p class="lead mb-3" id="siOutput-02"></p>
+  </div>
+  <div class="text-center">
+    <input type="button" value="Guardar / Imprimir" onclick="imprimir()" class="btn btn-secondary" >
+    <input class="btn btn-secondary" type="button" value="Reset"
+      onClick="document.getElementById('siForm').reset()">
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="container" div="compound-interest ">
+  
+  <table style="position: absolute; left: 50px;" class="table table-striped table-bordered w-auto" id="myTable">
+    <tr>
+        <th>Anos</th>
+        <th id="Invest_col_head">Investimento</th>
+        <th id="tpjuro_col_head">Tipo de juro</th>
+        <th id="tajuro_col_head">Taxa de juro</th>
+        <th id="pcontr_col_head">Periodo de contributo</th>
+        <th id="contr_col_head">Contributo</th>
+        <th id="vjuro_col_head">Valor de juro</th>
+        <th id="vfinal_col_head">Valor final</th>
+    </tr>
+</table>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
